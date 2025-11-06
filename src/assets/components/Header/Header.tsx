@@ -26,7 +26,7 @@ function Header() {
             flex justify-center items-center gap-3">
                 <HeaderButtons btnName='Register' onClick={()=>{navigate('/')}}/>
                 <HeaderButtons btnName='View List' onClick={()=>{navigate('/list')}}/>
-                <HeaderButtons btnName={dark?'Dark':'Light'} onClick={()=>setDark(!dark)}/>
+                <HeaderButtons btnName={dark?'Light':'Dark'} onClick={()=>setDark(!dark)}/>
             </div>
         </div>
     )
