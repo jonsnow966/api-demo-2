@@ -18,16 +18,16 @@ function Header() {
             : 'var(--color-text-primary-light)'
         }}>
         
-        <h1 className="text-2xl font-bold">
-            API DEMO 2
-        </h1>
+            <h1 className="text-2xl font-bold">
+                API DEMO 2
+            </h1>
 
-        <div className="w-fit h-fit
-        flex justify-center items-center gap-3">
-            <HeaderButtons btnName='Register' onClick={()=>{navigate('/')}}/>
-            <HeaderButtons btnName='View List' onClick={()=>{navigate('/list')}}/>
-            <HeaderButtons btnName='Dark' onClick={()=>setDark(!dark)}/>
-        </div>
+            <div className="w-fit h-fit
+            flex justify-center items-center gap-3">
+                <HeaderButtons btnName='Register' onClick={()=>{navigate('/')}}/>
+                <HeaderButtons btnName='View List' onClick={()=>{navigate('/list')}}/>
+                <HeaderButtons btnName={dark?'Dark':'Light'} onClick={()=>setDark(!dark)}/>
+            </div>
         </div>
     )
 }

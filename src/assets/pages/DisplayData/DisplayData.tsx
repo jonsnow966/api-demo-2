@@ -39,22 +39,21 @@ function DisplayData(){
 
   return (
     <div className="w-full h-fit
-    grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
-    justify-center items-center p-4">
+    flex flex-wrap justify-center sm:justify-start items-start gap-4 pl-10 p-4">
       {data ? data.map(
         (e) =>
         <div className="w-70 h-fit
         flex flex-col justify-start items-start gap-2
         rounded-[5px]
-        pl-4 py-5 mx-auto mt-5"
+        pl-4 py-5 mt-5"
         key={e.id}
         style={{
-                background: dark 
-                ? 'var(--color-card-dark)'
-                : 'var(--color-card-light)',
-                color: dark 
-                ? 'var(--color-text-primary-dark)'
-                : 'var(--color-text-primary-light)'
+            background: dark 
+            ? 'var(--color-card-dark)'
+            : 'var(--color-card-light)',
+            color: dark 
+            ? 'var(--color-text-primary-dark)'
+            : 'var(--color-text-primary-light)'
           }}>
             <p className="text-2xl"><span className="font-bold">Name:</span> {e.name}</p>
             <p className="text-2xl"><span className="font-bold">Age:</span> {e.age}</p>

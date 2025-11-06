@@ -4,6 +4,7 @@ import { useTheme } from "../../hooks/useTheme/useTheme";
 import putAPI from "../../api/putAPI";
 import numChecker from "../../functions/numChecker";
 import Button from "../../components/Button/Button";
+import strChecker from "../../functions/strChecker";
 
 interface User{
   id: number,
@@ -77,7 +78,13 @@ function UpdateUser() {
             <input className="p-2 rounded-[5px] outline-0"
             type="text"
             value={name}
-            onChange={(e)=>{setName(e.target.value)}}
+            onChange={(e)=>{
+              const value:boolean = strChecker(e.target.value);
+              if(value === true)
+                  setName(e.target.value)
+              else
+                  alert("Enter Alphabets Only");
+            }}
             placeholder="Enter Your Name"
             style={{
                 background: dark 
